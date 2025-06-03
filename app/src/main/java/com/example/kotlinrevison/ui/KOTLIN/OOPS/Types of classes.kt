@@ -2,6 +2,7 @@ package com.example.kotlin.KotlinProgramming.OOPS
 
 
 //data class help to store data and creating database
+
 data class User(
     var name:String,
     var age:Int
@@ -16,6 +17,7 @@ enum class Direction{
 //sealed class is very similar to enum class but used to define restricted hierarchy
 //we can also build multiple classes inside sealed class
 
+
 sealed class Shape(){
     class Circle(var radius: Int):Shape()
     class Square(var length:Int):Shape()
@@ -26,9 +28,40 @@ sealed class Shape(){
         is Square->length*length
         is Rectangle->length*breadth
     }
-
-
 }
+
+//An Abstract class is a blue print for other class
+// but you cannot create its objects but you have to inherit it
+
+
+//The difference between interface and abstract class is if we define any function in interface
+//then its not necessary to implemnt it in child class but in abstract class we have to implement it
+//this is the mahjor differnence between interface and abstract class
+
+
+//when you want to enforce a common behaviour in child class you use abstract class
+
+
+abstract class Animal{
+    abstract fun makesound()
+}
+
+class Dog:Animal(){
+    override fun makesound() {
+        println("Dog barks")
+
+    }
+}
+
+
+//Singelton Class is used when we need to create a single object or Single Instance
+
+object Database{
+    fun connect(){
+        println("connected")
+    }
+}
+
 
 
 fun main() {
@@ -40,7 +73,6 @@ fun main() {
     println(user1.age)
     println(user2.name)
     println(user2.age)
-
 
     ////////////////////
 
@@ -66,6 +98,14 @@ fun main() {
 
     //////////////////////
 
+    val d= Dog()
+    println(d.makesound())
+
+    ///////////////////////
+
+    //Singelton class example
+
+    Database.connect()
 
 }
 

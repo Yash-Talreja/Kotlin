@@ -2,7 +2,6 @@ package com.example.kotlin.KotlinProgramming.OOPS
 
 // Class is a Blueprint of a Object
 
-
 class Person{
     fun name(){
         println("person name is yash")
