@@ -13,6 +13,8 @@ fun main() {
     // Not-null assertion(Crashes if null)
     println("Forced length: ${name!!.length}")
 
+
+
     // Safe let(Execute only if not null)
     name?.let {
         println("Name in uppercase: ${it.uppercase()}")
