@@ -9,10 +9,12 @@ abstract class Vehical{
 
     abstract fun start()  //Abstract method must be implemented in sub class
 
+
     fun stop(){           //This method will deirectly inherit to the class Car
         println("stop")
     }
 }
+
 
 class Car:Vehical(){
     override fun start() {
@@ -29,7 +31,6 @@ fun main() {
     addrs.state()
     addrs.address()
 }
-
 
 //Interface is fully abstraction
 

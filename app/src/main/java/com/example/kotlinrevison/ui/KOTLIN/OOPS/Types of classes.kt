@@ -62,8 +62,6 @@ object Database{
     }
 }
 
-
-
 fun main() {
 
     val user1=User("yash",22)
